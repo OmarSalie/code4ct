@@ -1,0 +1,57 @@
+// Hide menu items
+.navItems {
+    display: none;
+}
+
+// fix drawer icon to the right of the navbar
+.navbar{
+    background-color: white;
+    .icon {
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        display: block;
+        font-size: 20px;
+        color: $pink;
+    }
+}
+
+// select the trigger class that will show menu onclick of icon, make sure the position is relative
+.navbar.responsive {
+    .navItems {
+        float: none;
+        display: block;
+        text-align: center;
+        padding-top: 23px;
+        width: 100vw;
+        height: 4vh;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $pink;
+            color: white;
+        }
+
+        &:first-child {
+            border-top: 1px $pink solid;
+        }
+    }
+
+    #search {
+        border: none;
+        border-bottom: 2px $pink solid;
+        border-radius: 5px;
+    }
+
+    .search-button {
+        text-decoration: none;
+        border: none;
+        background-color: white;
+        
+        &:hover {
+            color: $pink;
+        }
+    }
+} 

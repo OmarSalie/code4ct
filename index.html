@@ -1,30 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- a stylesheet from github.com/necolas/normalize.css which removes default styling done by browsers -->
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <!-- stylesheet containing the styles used across the website -->
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <!-- the favicon used in the browser tabs -->
+        <link rel="icon" href="images/favicon.png" type="image/ico">
+        <!--  -->
+        <link rel="stylesheet" href="css/fontawesome-all.css" type="text/css">
+        <link rel="stylesheet" href="css/fa-solid.css" type="text/css">
+        <title>CODE4CT | Young women leveraging tech for social innovation</title>
+    </head>
+    <body>
+        <div class="container">
+            <!-- the header contains the company logo, the navbar and a search box -->
+            <!-- the navigation will contain a link to home, courses, portfolio, about, contact and a search bar -->
+            <header id="page-top">
+                <a href="#page-top" class="company-logo"><img src="images/code4ct-logo.jpg" alt="CODE4CT"></a>
+                <div class="navbar" id="nav">
+                    <a href="#page-top" class="navItems">Home</a>
+                    <a href="courses.html" class="navItems">Courses</a>
+                    <a href="portfolio.html" class="navItems">Portfolio</a>
+                    <a href="about.html" class="navItems">About</a>
+                    <a href="contact.html" class="navItems">Contact</a>
+                    <span class="navItems"><input type="text" name="search" id="search" >
+                    <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button></span>
+                    <!-- navigation drawer icon for mobile view  -->
+                    <a href="javascript:void(0);" class="icon" onclick="drawerToggle()"><i class="fa fa-bars"></i></a>
+                </div>
+                
+            </header>
 
-        </header>
+            <!-- this section which contains basic company information and an image slider -->
+            <section id="image_slider">
+                <h2>Code for Cape Town</h2>
+                <p>We want to see young women empowered to leverage technology for social innovation, so that there is greater diversity in the African tech industry. We want high school girls to have an enabling environment to imagine and create new technology that is relevant to a South African context.</p>
+                <button class="expand-right"></button>
+            </section>
 
-        <main>
+            <!-- this section describes what the company does -->
+            <section id="who_are_we">
+                <div>
+                    <h3 class="transparent-border"><span class="red-border-bottom">Who</span> Are We</h3>
+                    <p>Code for Cape Town strives to see young women empowered to leverage technology for social innovation, so that there is greater diversity in the African tech industry.</p>
+                    <p>Code4CT is broadening perspectives about career opportunities for many girls and is showing them that the ICT sector offers exciting career paths with the opportunity for social impact. Through using coding and web building skills, participants are exposed to how IT skills can be applied to solve problems, and they are encouraged to use their knowledge to tackle a real local challenge. Code for Cape Town equips high potential female learners with the coding and problem solving  skills. </p>
+                    <button class="expand-right"></button>
+                </div>
+                
+                <div class="images4x4">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                </div>
+            </section>
 
-        </main>
+            <!-- this section describes what the company offers -->
+            <section id="offers">
 
-        <footer>
+            </section>
 
-        </footer>
-    </div>
+            <!-- this section has a few images from the portfolio page -->
+            <section id="portfolio">
 
-    <!-- On page scripting -->
-    <script></script>
+            </section>
 
-    <!-- External scripting -->
-    <script src="main.js"></script>
-</body>
+            <!-- this section introduces the staff at the company -->
+            <section id="meet_our_team">
+
+            </section>
+
+            <!-- this section uses a countup for the company milestones -->
+            <section id="countup">
+
+            </section>
+
+            <!-- this section has a subscription form -->
+            <section id="subscription_form">
+
+            </section>
+
+            <!-- this section makes use of a carasole to display all company sponsers -->
+            <section id="spons_carousel">
+
+            </section>
+
+            <!-- the footer contains simple company information, links and social media -->
+            <footer>
+                
+            </footer>
+        </div>
+
+        <!-- On page scripting -->
+        <script></script>
+
+        <!-- External scripting -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
