@@ -1,6 +1,6 @@
 /*
-Theme Name: 
-Description: 
+Theme Name: CODE4CT
+Description: Black and white with the company's custom pink
 Author: 
 Author URI: 
 Tags: 
@@ -17,9 +17,36 @@ Tags:
 //===========================================================================================================
 // General Styles
 //===========================================================================================================
-img {
-        width: 100vw;
+html {
+        scroll-behavior: smooth;
 }
+img {
+        width: 100vw;   // make the images fit the width of the screen
+}
+.red-border-bottom {    
+        border-bottom: 2px $pink solid; // places an underline
+}
+.black-bg {
+        background-color: black;
+        color: white;
+}
+.off {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+}
+.slider-text {
+        .expand-right {
+                width: 100px;
+                height: 50px;
+                text-align: left;
+                &:hover {
+                        width: 110px;
+                }
+        }
+}
+
 //===========================================================================================================
 // Header Styles
 //===========================================================================================================
@@ -29,12 +56,13 @@ header {
         width: 100vw;           // make sure the header stretches the length of the screen
         height: 9vh;            // height for the header that does not take up too much of the screen
         background-color: white;
+        z-index: 2;
 
         .company-logo {    
                 height: 100vh;
 
                 img {
-                        width: 40vw;
+                        width: 40vw;    // sizes the company logo
                         height: 8vh;
                 }
         }
@@ -42,18 +70,160 @@ header {
 // Imports
 
 @import 'partials/navigation';
-
-#image_slider {
-        background-color: black;
-        color: white;
-}
-
 //===========================================================================================================
-// Main Styles
+// Subscription Form
 //===========================================================================================================
-.red-border-bottom {
-        border-bottom: 2px $pink solid;
+.subscription-compass {
+        width: 50px;
+        height: 50px;
 }
+//===========================================================================================================
+// Carousel
+//===========================================================================================================
+
+
 //===========================================================================================================
 // Footer Styles
 //===========================================================================================================
+.pink-bg {
+        background-color: $pink;
+        color: white;
+}
+
+.social-media {
+        position: static;
+        bottom: 0;
+}
+//___________________________________________________________________________________________________________
+// Home Page
+//___________________________________________________________________________________________________________
+//===========================================================================================================
+// =====Image Slider
+//===========================================================================================================
+.mySlides {
+        width: 100%; 
+        height: 60vh;
+}
+.slide1 {
+        background-image: url('../images/code4ct-homeslider1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+.slide2 {
+        background-image: url('../images/code4ct-homeslider2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+.slide3 {
+        background-image: url('../images/code4ct-homeslider3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+.slideIndicators {
+        position: relative;
+        bottom: 0;
+        height: 10vh;
+        width: 100vw;
+}
+.arrow {
+        color: white;
+        font-size: 4vh;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+
+        &:hover {
+                color: $pink;
+        }
+}
+.badges {
+        width: 100%;
+        z-index: 1;
+        padding-left: 38vw;
+        padding-right: 38vw; 
+}
+.badge {
+        color: white;
+        font-size: 8vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        
+}
+.badgeSelect {
+        color: $pink;
+        text-decoration-style: double;
+}
+.float-left{
+        float: left;
+}
+
+.float-right {
+        float: right;
+}
+.slider-text {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 3px;
+        float: left;
+        box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+
+        h2 {
+                text-align: center;
+        }
+        p {
+                text-align: justify;
+                margin: 0;
+        }
+        .read-btn {
+                border: none;
+                border-radius: 3px;
+                color: white;
+                background-color: $pink;
+                width: 100px;
+                height: 50px;
+               
+        }
+        .code-btn {
+                border: 3px $pink solid;
+                border-radius: 3px;
+                color: $pink;
+                background-color: transparent;
+                width: 100px;
+                height: 50px;
+        }
+}
+//===========================================================================================================
+// =====Who Are We
+//===========================================================================================================
+
+//===========================================================================================================
+// =====Offers
+//===========================================================================================================
+
+//===========================================================================================================
+// =====Portfolio
+//===========================================================================================================
+
+//===========================================================================================================
+// =====Count Up
+//===========================================================================================================
+
+//___________________________________________________________________________________________________________
+// Courses
+//___________________________________________________________________________________________________________
+
+//___________________________________________________________________________________________________________
+// Portfolio
+//___________________________________________________________________________________________________________
+
+//___________________________________________________________________________________________________________
+// About
+//___________________________________________________________________________________________________________
+
+//___________________________________________________________________________________________________________
+// Contact
+//___________________________________________________________________________________________________________
+
+
