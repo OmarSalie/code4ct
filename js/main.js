@@ -67,7 +67,10 @@ function countUp(id, start, end, duration) {
   timer = setInterval(run, stepTime);
   run();
 }
+
+// running the funtion for the count ups
 countUp("count-coffee", 0, 1050, 2000);
 countUp("count-projects", 0, 1850, 2000);
 countUp("count-girls", 0, 2000, 2000);
 countUp("count-hours", 0, 3300, 2000);
+
