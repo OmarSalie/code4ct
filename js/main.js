@@ -9,31 +9,32 @@ function drawerToggle() {
     }
 }
 
-let slideIndex = 1;
-showDivs(slideIndex);
+let sliderIndex = 1;
+showDivs(sliderIndex);
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+  showDivs(sliderIndex += n);
 }
 
 function currentDiv(n) {
-  showDivs(slideIndex = n);
+  showDivs(sliderIndex = n);
 }
 
 function showDivs(n) {
   let i;
   let x = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("badge");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
+  if (n > x.length) {sliderIndex = 1}    
+  if (n < 1) {sliderIndex = x.length}
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
      dots[i].className = dots[i].className.replace(" badgeSelect", "");
   }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " badgeSelect";
+  console.log(sliderIndex);
+  x[sliderIndex-1].style.display = "block";  
+  dots[sliderIndex-1].className += " badgeSelect";
 }
 
 function countUp(id, start, end, duration) {
@@ -74,16 +75,18 @@ countUp("count-hours", 0, 8765, 2000);
 countUp("count-coffee", 0, 3000, 2000);
 countUp("count-projects", 0, 3120, 2000);
 
+let slideIndex = 0;
 carousel();
 
 function carousel() {
     var i;
-    var x = document.getElementsByClassName("partner-logo");
+    var x = document.getElementsByClassName("partner-logos");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none"; 
     }
     slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1} 
-    x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 4000); // Change image every 2 seconds
+    
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "inline-block"; 
+    setTimeout(carousel, 10000); // Change image every 2 seconds 
 }

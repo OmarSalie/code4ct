@@ -141,33 +141,34 @@ header {
   height: 50px; }
 
 .partner-logos {
-  height: 50vh;
+  height: 200px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   position: relative;
+  transform: translate3d(0, 0, 0);
   animation-name: move-left;
-  animation-duration: 4s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  overflow: hidden;
   padding: 25px 0 0;
   white-space: nowrap; }
-  .partner-logos .partner-logo {
-    display: inline-block;
-    width: 70%; }
-    .partner-logos .partner-logo img {
-      vertical-align: top;
-      width: 100%; }
+  .partner-logos img {
+    vertical-align: top;
+    padding: 0 60px;
+    width: 200px; }
+
+.slider {
+  overflow: hidden;
+  background-color: black;
+  margin-left: -100px;
+  height: 200px; }
 
 @keyframes move-left {
   0% {
     left: 100%; }
-  25% {
-    left: 50%; }
-  50% {
-    left: 0%; }
-  75% {
-    left: -50%; }
   100% {
-    left: -100%; } }
+    left: -500%; } }
 .pink-bg {
   background-color: #b36e69;
   color: white; }
@@ -299,6 +300,16 @@ header {
   height: 200px; }
 #offers .off .off-text {
   padding: 10px; }
+  #offers .off .off-text h4 {
+    text-align: center; }
+  #offers .off .off-text p {
+    text-align: justify; }
+
+.portfolio-text {
+  padding: 10px; }
+
+.pro-name {
+  font-weight: bold; }
 
 .counter {
   color: white;
