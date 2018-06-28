@@ -7,6 +7,7 @@ Tags:
 */
 
 // Imports
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
 
 @import 'partials/variables',
         'partials/mixins',
@@ -20,33 +21,22 @@ Tags:
 html {
         scroll-behavior: smooth;
 }
+.container {
+        font-family: 'Roboto', sans-serif;
+}
 img {
         width: 100vw;   // make the images fit the width of the screen
 }
 .red-border-bottom {    
-        border-bottom: 2px $pink solid; // places an underline
+        border-bottom: 3px $pink solid; // places an underline
+}
+.transparent-border {
+        border-bottom: 1px rgba(0,0,0,0.2) solid;
 }
 .black-bg {
         background-color: black;
         color: white;
 }
-.off {
-        display: block;
-        margin: 0 auto;
-        width: 200px;
-        height: 200px;
-}
-.slider-text {
-        .expand-right {
-                width: 100px;
-                height: 50px;
-                text-align: left;
-                &:hover {
-                        width: 110px;
-                }
-        }
-}
-
 //===========================================================================================================
 // Header Styles
 //===========================================================================================================
@@ -141,19 +131,23 @@ header {
 .badges {
         width: 100%;
         z-index: 1;
-        padding-left: 38vw;
-        padding-right: 38vw; 
+        padding-left: 40vw;
 }
 .badge {
         color: white;
-        font-size: 8vh;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
+        font-size: 6vh;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        &:hover {
+                cursor: pointer;
+        }
         
 }
 .badgeSelect {
         color: $pink;
-        text-decoration-style: double;
+        font-size: 8vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
 }
 .float-left{
         float: left;
@@ -179,10 +173,13 @@ header {
         .read-btn {
                 border: none;
                 border-radius: 3px;
-                color: white;
                 background-color: $pink;
                 width: 100px;
                 height: 50px;
+                a {
+                        text-decoration: none;
+                        color: white;
+                }
                
         }
         .code-btn {
@@ -193,15 +190,54 @@ header {
                 width: 100px;
                 height: 50px;
         }
+        .expand-right {
+                width: 100px;
+                height: 50px;
+                text-align: left;
+                &:hover {
+                        width: 110px;
+                }
+        }
 }
 //===========================================================================================================
 // =====Who Are We
 //===========================================================================================================
+#who_are_we {
+        .expand-right {
+                width: 100px;
+                height: 50px;
+                text-align: left;
+                &:hover {
+                        width: 110px;
+                }
+        }
+        .who-text {
+                padding: 10px;
 
+                p {
+                        text-align: justify;
+                }
+        }
+}
+.who-read-btn {
+        border: 1px black solid;
+        background-color: white;
+        color: black;
+}
+.images4x4 {
+        img {
+                width: 50vw;
+        } 
+}
 //===========================================================================================================
 // =====Offers
 //===========================================================================================================
-
+.off {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+}
 //===========================================================================================================
 // =====Portfolio
 //===========================================================================================================
@@ -209,7 +245,10 @@ header {
 //===========================================================================================================
 // =====Count Up
 //===========================================================================================================
-
+.counter {
+        color: white;
+        text-align: center;
+}
 //___________________________________________________________________________________________________________
 // Courses
 //___________________________________________________________________________________________________________
