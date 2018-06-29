@@ -71,4 +71,5 @@ footer{grid-area: footer;}
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 25% 25%;
+    grid-gap: 5px;
 }

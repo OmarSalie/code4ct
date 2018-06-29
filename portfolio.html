@@ -35,9 +35,89 @@
                 </div>
             </header>        
 
+            <section id="page-header">
+                <h1>PORTFOLIO</h1>
+                <p><span class="main-pink">HOME</span> → PORTFOLIO</p>
+            </section>
+
+            <section id="galleries">
+                <div class="gallery">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                </div>
+                <div class="gallery">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                </div>
+                <div class="gallery">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                </div>
+                <div class="slideNav black-bg">
+                    <br>
+                    <div class="arrow float-left" onclick="plusDivs(-1)">&#10094;</div>
+                    <span class="all-indicators">
+                        <span class="indicator" onclick="currentDiv(1)">1</span>
+                        <span class="indicator" onclick="currentDiv(2)">2</span>
+                        <span class="indicator" onclick="currentDiv(3)">3</span>
+                    </span>
+                        
+                    <div class="arrow float-right" onclick="plusDivs(1)">&#10095;</div>
+                </div>
+            </section>
+
             <!-- this section makes use of a carasole to display all company sponsers -->
             <section id="partner_carousel">
-
+                <div class="slider">
+                        <div class="partner-logos">
+                            <img src="images/partner-logo1.jpg" alt="Deloitte Digital" width="200px" height: "80px">
+                            <img src="images/partner-logo2.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo3.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo4.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo5.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo6.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo7.jpg" alt="DGMT" width="200px" height: "80px">
+                        </div>
+                        <div class="partner-logos">
+                            <img src="images/partner-logo1.jpg" alt="Deloitte Digital" width="200px" height: "80px">
+                            <img src="images/partner-logo2.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo3.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo4.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo5.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo6.jpg" alt="DGMT" width="200px" height: "80px">
+                            <img src="images/partner-logo7.jpg" alt="DGMT" width="200px" height: "80px">
+                        </div>
+                    </div>
             </section>
 
             <!-- the footer contains simple company information, links and social media -->
@@ -88,10 +168,47 @@
             </footer>
         </div>
 
-        <!-- On page scripting -->
-        <script></script>
-
         <!-- External scripting -->
         <script src="js/main.js"></script>
+
+        <!-- On page scripting -->
+        <script>
+            'use strict';
+
+            let sliderIndex = 1;
+            showDivs(sliderIndex);
+
+            function plusDivs(n) {
+            showDivs(sliderIndex += n);
+            }
+
+            function currentDiv(n) {
+            showDivs(sliderIndex = n);
+            }
+
+            function showDivs(n) {
+                let i;
+                let x = document.getElementsByClassName("gallery");
+                let dots = document.getElementsByClassName("indicator");
+
+                if (n > x.length) {
+                    sliderIndex = 1
+                }    
+                if (n < 1) {
+                    sliderIndex = x.length
+                }
+
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" selected", "");
+                }
+
+                console.log(sliderIndex);
+                x[sliderIndex-1].style.display = "block";  
+                dots[sliderIndex-1].className += " selected";
+            }
+        </script>
     </body>
 </html>

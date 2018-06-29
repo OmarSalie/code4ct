@@ -1,11 +1,161 @@
 // Tablet
-@media (min-width: 786px) {
+@media (min-width: 768px) {
+    // font sizes
+    .container {
+        p {
+            font-size: 35px;
+        }
+        a, li {
+            font-size: 25px;
+        }
+        h2 {
+            font-size: 50px;
+        }
+        h3 {
+            font-size: 40px;
+        }
+        h4 {
+            font-size: 35px;
+        }
+    }
 
+    // drawer icon size
+    .navbar{
+        
+        .icon {
+            font-size: 45px;
+        }
+    }
+
+    // image slider buttons
+    .slider-text {
+        .expand-right {
+            width: 150px;
+            height: 75px;
+            text-align: left;
+            &:hover {
+                    width: 165px;
+            }
+        }
+    }
+
+    // who are we read more button
+    #who_are_we {
+        .expand-right {
+                width: 150px;
+                height: 75px;
+                text-align: left;
+                &:hover {
+                        width: 165px;
+                }
+        }
+    }
 }
 
 // Desktop
 @media (min-width: 1024px) {
+    // font sizes
+    .container {
+        p {
+            font-size: 20px;
+        }
+        a, li {
+            font-size: 25px;
+        }
+        h2 {
+            font-size: 40px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        h4 {
+            font-size: 25px;
+        }
+    }
+
+    // header
+    header {
+        .company-logo {
+            img {
+                width: 30vw;
+            }
+        }
+    }
     
+    // navigation
+    .navItems {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        padding-left: 5px;
+        padding-right: 4px;
+        &:hover {
+            color: $pink;
+        }
+    }
+    .navbar{
+        vertical-align: top;
+        padding-top: 45px;
+        display: inline-block;
+        width: 69vw;
+        .icon {
+            display: none;
+        }
+    }
+    .search-bar {
+        float: right;
+
+        #search {
+            padding-right: 0;
+        }
+        .search-button {
+            padding-left: 0;
+        }
+    }
+
+    // footer
+    footer {
+        .site-info {
+            display: grid;
+            grid-template-areas: "contact company help";
+        }
+    }
+    
+    // who are we structure
+    #who_are_we {
+        display: grid;
+        grid-template-columns: 10% 40% 40% 10%;
+        .who-text{
+            grid-column: 2/3;
+            grid-row: 1;
+        }
+        .who-images{
+            grid-column: 3/4;
+            grid-row: 1;
+            margin: 40px auto;
+        }
+        .images4x4 img {
+            width: 19vw;
+        }
+    }
+    
+    #offers {
+        display: grid;
+        grid-template-columns: 10% repeat(4, 20%) 10%;
+        
+        .off-coding{
+            grid-column: 2;
+        }
+        .off-communication{
+            grid-column: 3;
+        }
+        .off-problem-solving{
+            grid-column: 4;
+        }
+        .off-career-guidance{
+            grid-column: 5;
+        }
+    }
 }
 
 @media (min-width: 1280px) {

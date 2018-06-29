@@ -63,7 +63,8 @@ footer {
 .images4x4 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 25% 25%; }
+  grid-template-rows: 25% 25%;
+  grid-gap: 5px; }
 
 html {
   scroll-behavior: smooth; }
@@ -84,6 +85,24 @@ img {
   background-color: black;
   color: white; }
 
+.pink-font {
+  color: #b36e69; }
+
+#page-header {
+  width: 100vw;
+  height: 300px;
+  color: grey;
+  background-color: white; }
+  #page-header h1 {
+    margin-top: 100px;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center; }
+  #page-header p {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center; }
+
 header {
   position: sticky;
   top: 0;
@@ -92,7 +111,8 @@ header {
   background-color: white;
   z-index: 2; }
   header .company-logo {
-    height: 100vh; }
+    height: inherit;
+    display: inline-block; }
     header .company-logo img {
       width: 40vw;
       height: 8vh; }
@@ -136,9 +156,23 @@ header {
   .navbar.responsive .search-button:hover {
     color: #b36e69; }
 
-.subscription-compass {
-  width: 50px;
-  height: 50px; }
+.sub_form-icon {
+  color: #b36e69; }
+
+#subscription_form {
+  text-align: center; }
+  #subscription_form form #sub_form-email {
+    border: 1px black solid;
+    border-radius: 3px 0 0 3px;
+    padding-right: 0; }
+  #subscription_form form .sub_form-btn {
+    border: 1px black solid;
+    border-radius: 0 3px 3px 0;
+    padding-left: 0;
+    text-align: left;
+    width: 100px; }
+    #subscription_form form .sub_form-btn:hover {
+      width: 110px; }
 
 .partner-logos {
   height: 200px;
@@ -171,11 +205,23 @@ header {
     left: -500%; } }
 .pink-bg {
   background-color: #b36e69;
-  color: white; }
+  color: white;
+  height: 64px; }
 
 .social-media {
   position: static;
   bottom: 0; }
+
+.media-links {
+  float: right; }
+
+.site-info {
+  padding: 10px; }
+
+.info-contact ul {
+  list-style-type: none; }
+  .info-contact ul li {
+    padding: 3px; }
 
 .mySlides {
   width: 100%;
@@ -199,7 +245,7 @@ header {
   background-size: cover;
   background-position: center; }
 
-.slideIndicators {
+.slideNav {
   position: relative;
   bottom: 0;
   height: 10vh;
@@ -213,19 +259,21 @@ header {
   .arrow:hover {
     color: #b36e69; }
 
-.badges {
+.badges, .all-indicators {
   width: 100%;
   z-index: 1;
   padding-left: 40vw; }
 
-.badge {
+.badge, .indicator {
   color: white;
   font-size: 6vh;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  margin: 2vh auto;
   transition: background-color 0.6s ease; }
-  .badge:hover {
+  .badge:hover, .indicator:hover {
     cursor: pointer; }
+
+.indicator {
+  border: 1px white solid; }
 
 .badgeSelect {
   color: #b36e69;
@@ -233,6 +281,9 @@ header {
   padding-top: 1vh;
   padding-bottom: 1vh;
   transition: font-size 0.6s ease; }
+
+.selected {
+  background-color: #b36e69; }
 
 .float-left {
   float: left; }
@@ -254,19 +305,17 @@ header {
   .slider-text .read-btn {
     border: none;
     border-radius: 3px;
-    background-color: #b36e69;
-    width: 100px;
-    height: 50px; }
+    background-color: #b36e69; }
     .slider-text .read-btn a {
       text-decoration: none;
       color: white; }
   .slider-text .code-btn {
     border: 3px #b36e69 solid;
     border-radius: 3px;
-    color: #b36e69;
-    background-color: transparent;
-    width: 100px;
-    height: 50px; }
+    background-color: transparent; }
+    .slider-text .code-btn a {
+      text-decoration: none;
+      color: #b36e69; }
   .slider-text .expand-right {
     width: 100px;
     height: 50px;
@@ -286,33 +335,160 @@ header {
     text-align: justify; }
 
 .who-read-btn {
-  border: 1px rgba(0, 0, 0, 0.2) solid;
-  background-color: white;
-  color: rgba(0, 0, 0, 0.2); }
+  border: 1px rgba(0, 0, 0, 0.7) solid;
+  background-color: transparent;
+  border-radius: 5px; }
+  .who-read-btn a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7); }
 
 .images4x4 img {
-  width: 50vw; }
+  width: 40vw;
+  margin: 0 auto; }
 
 #offers .off .off-image {
   display: block;
-  margin: 0 auto;
-  width: 200px;
-  height: 200px; }
+  margin: 20px auto;
+  width: 100px;
+  height: 100px; }
 #offers .off .off-text {
   padding: 10px; }
   #offers .off .off-text h4 {
     text-align: center; }
   #offers .off .off-text p {
-    text-align: justify; }
+    text-align: center; }
 
 .portfolio-text {
   padding: 10px; }
 
+.profile img {
+  display: block;
+  width: 80%;
+  margin: 0 auto; }
+
+.pro-text {
+  border: 1px black solid;
+  border-radius: 3px;
+  margin: 10px; }
+
 .pro-name {
-  font-weight: bold; }
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px black solid; }
+
+.pro-title {
+  text-align: center;
+  font-style: italic;
+  border-bottom: 1px black solid; }
+
+.pro-desc {
+  text-align: center; }
 
 .counter {
+  border-top: 3px #b36e69 solid;
   color: white;
   text-align: center; }
+
+.count-number {
+  font-size: 45px; }
+
+.count-desc {
+  font-size: 25px; }
+
+@media (min-width: 768px) {
+  .container p {
+    font-size: 35px; }
+  .container a, .container li {
+    font-size: 25px; }
+  .container h2 {
+    font-size: 50px; }
+  .container h3 {
+    font-size: 40px; }
+  .container h4 {
+    font-size: 35px; }
+
+  .navbar .icon {
+    font-size: 45px; }
+
+  .slider-text .expand-right {
+    width: 150px;
+    height: 75px;
+    text-align: left; }
+    .slider-text .expand-right:hover {
+      width: 165px; }
+
+  #who_are_we .expand-right {
+    width: 150px;
+    height: 75px;
+    text-align: left; }
+    #who_are_we .expand-right:hover {
+      width: 165px; } }
+@media (min-width: 1024px) {
+  .container p {
+    font-size: 20px; }
+  .container a, .container li {
+    font-size: 25px; }
+  .container h2 {
+    font-size: 40px; }
+  .container h3 {
+    font-size: 30px; }
+  .container h4 {
+    font-size: 25px; }
+
+  header .company-logo img {
+    width: 30vw; }
+
+  .navItems {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding-left: 5px;
+    padding-right: 4px; }
+    .navItems:hover {
+      color: #b36e69; }
+
+  .navbar {
+    vertical-align: top;
+    padding-top: 45px;
+    display: inline-block;
+    width: 69vw; }
+    .navbar .icon {
+      display: none; }
+
+  .search-bar {
+    float: right; }
+    .search-bar #search {
+      padding-right: 0; }
+    .search-bar .search-button {
+      padding-left: 0; }
+
+  footer .site-info {
+    display: grid;
+    grid-template-areas: "contact company help"; }
+
+  #who_are_we {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%; }
+    #who_are_we .who-text {
+      grid-column: 2/3;
+      grid-row: 1; }
+    #who_are_we .who-images {
+      grid-column: 3/4;
+      grid-row: 1;
+      margin: 40px auto; }
+    #who_are_we .images4x4 img {
+      width: 19vw; }
+
+  #offers {
+    display: grid;
+    grid-template-columns: 10% repeat(4, 20%) 10%; }
+    #offers .off-coding {
+      grid-column: 2; }
+    #offers .off-communication {
+      grid-column: 3; }
+    #offers .off-problem-solving {
+      grid-column: 4; }
+    #offers .off-career-guidance {
+      grid-column: 5; } }
 
 /*# sourceMappingURL=styles.css.map */

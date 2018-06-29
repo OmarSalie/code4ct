@@ -9,34 +9,6 @@ function drawerToggle() {
     }
 }
 
-let sliderIndex = 1;
-showDivs(sliderIndex);
-
-function plusDivs(n) {
-  showDivs(sliderIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(sliderIndex = n);
-}
-
-function showDivs(n) {
-  let i;
-  let x = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("badge");
-  if (n > x.length) {sliderIndex = 1}    
-  if (n < 1) {sliderIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" badgeSelect", "");
-  }
-  console.log(sliderIndex);
-  x[sliderIndex-1].style.display = "block";  
-  dots[sliderIndex-1].className += " badgeSelect";
-}
-
 function countUp(id, start, end, duration) {
   // assumes integer values for start and end
   
@@ -69,14 +41,7 @@ function countUp(id, start, end, duration) {
   run();
 }
 
-// running the funtion for the count ups
-countUp("count-girls", 0, 780, 2000);
-countUp("count-hours", 0, 8765, 2000);
-countUp("count-coffee", 0, 3000, 2000);
-countUp("count-projects", 0, 3120, 2000);
-
 let slideIndex = 0;
-carousel();
 
 function carousel() {
     var i;
