@@ -9,7 +9,6 @@ function drawerToggle() {
     }
 }
 
-<<<<<<< HEAD
 let sliderIndex = 1;
 showDivs(sliderIndex);
 
@@ -19,44 +18,23 @@ function plusDivs(n) {
 
 function currentDiv(n) {
   showDivs(sliderIndex = n);
-=======
-let slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1
 }
 
 function showDivs(n) {
   let i;
   let x = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("badge");
-<<<<<<< HEAD
   if (n > x.length) {sliderIndex = 1}    
   if (n < 1) {sliderIndex = x.length}
-=======
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
      dots[i].className = dots[i].className.replace(" badgeSelect", "");
   }
-<<<<<<< HEAD
   console.log(sliderIndex);
   x[sliderIndex-1].style.display = "block";  
   dots[sliderIndex-1].className += " badgeSelect";
-=======
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " badgeSelect";
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1
 }
 
 function countUp(id, start, end, duration) {
@@ -92,7 +70,6 @@ function countUp(id, start, end, duration) {
 }
 
 // running the funtion for the count ups
-<<<<<<< HEAD
 countUp("count-girls", 0, 780, 2000);
 countUp("count-hours", 0, 8765, 2000);
 countUp("count-coffee", 0, 3000, 2000);
@@ -113,10 +90,3 @@ function carousel() {
     x[slideIndex-1].style.display = "inline-block"; 
     setTimeout(carousel, 10000); // Change image every 2 seconds 
 }
-=======
-countUp("count-coffee", 0, 1050, 2000);
-countUp("count-projects", 0, 1850, 2000);
-countUp("count-girls", 0, 2000, 2000);
-countUp("count-hours", 0, 3300, 2000);
-
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1

@@ -22,11 +22,7 @@ html {
         scroll-behavior: smooth;
 }
 .container {
-<<<<<<< HEAD
         font-family: 'Roboto', sans-serif, Verdana, sans-serif;
-=======
-        font-family: 'Roboto', sans-serif;
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1
 }
 img {
         width: 100vw;   // make the images fit the width of the screen
@@ -74,7 +70,6 @@ header {
 //===========================================================================================================
 // Carousel
 //===========================================================================================================
-<<<<<<< HEAD
  .partner-logos {
         height: 200px;
         width: 100%;
@@ -121,8 +116,6 @@ header {
                       left: -500%;
               }
 }
-=======
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1
 
 
 //===========================================================================================================
@@ -130,7 +123,6 @@ header {
 //===========================================================================================================
 .pink-bg {
         background-color: $pink;
-<<<<<<< HEAD
         color: white;
 }
 
@@ -173,8 +165,6 @@ header {
         width: 100vw;
 }
 .arrow {
-=======
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1
         color: white;
         font-size: 4vh;
         padding-top: 3vh;
@@ -214,7 +204,6 @@ header {
         float: right;
 }
 
-<<<<<<< HEAD
 .slider-text {
         margin: 10px;
         padding: 10px;
@@ -262,118 +251,6 @@ header {
 // =====Who Are We
 //===========================================================================================================
 #who_are_we {
-=======
-.social-media {
-        position: static;
-        bottom: 0;
-}
-//___________________________________________________________________________________________________________
-// Home Page
-//___________________________________________________________________________________________________________
-//===========================================================================================================
-// =====Image Slider
-//===========================================================================================================
-.mySlides {
-        width: 100%; 
-        height: 60vh;
-}
-.slide1 {
-        background-image: url('../images/code4ct-homeslider1.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-}
-.slide2 {
-        background-image: url('../images/code4ct-homeslider2.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-}
-.slide3 {
-        background-image: url('../images/code4ct-homeslider3.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-}
-.slideIndicators {
-        position: relative;
-        bottom: 0;
-        height: 10vh;
-        width: 100vw;
-}
-.arrow {
-        color: white;
-        font-size: 4vh;
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-
-        &:hover {
-                color: $pink;
-        }
-}
-.badges {
-        width: 100%;
-        z-index: 1;
-        padding-left: 40vw;
-}
-.badge {
-        color: white;
-        font-size: 6vh;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
-        &:hover {
-                cursor: pointer;
-        }
-        
-}
-.badgeSelect {
-        color: $pink;
-        font-size: 8vh;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-}
-.float-left{
-        float: left;
-}
-
-.float-right {
-        float: right;
-}
-.slider-text {
-        margin: 10px;
-        padding: 10px;
-        border-radius: 3px;
-        float: left;
-        box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
-
-        h2 {
-                text-align: center;
-        }
-        p {
-                text-align: justify;
-                margin: 0;
-        }
-        .read-btn {
-                border: none;
-                border-radius: 3px;
-                background-color: $pink;
-                width: 100px;
-                height: 50px;
-                a {
-                        text-decoration: none;
-                        color: white;
-                }
-               
-        }
-        .code-btn {
-                border: 3px $pink solid;
-                border-radius: 3px;
-                color: $pink;
-                background-color: transparent;
-                width: 100px;
-                height: 50px;
-        }
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1
         .expand-right {
                 width: 100px;
                 height: 50px;
@@ -382,7 +259,6 @@ header {
                         width: 110px;
                 }
         }
-<<<<<<< HEAD
         .who-text {
                 padding: 10px;
 
@@ -438,51 +314,6 @@ header {
 .pro-name {
         font-weight: bold;
 }
-=======
-}
-//===========================================================================================================
-// =====Who Are We
-//===========================================================================================================
-#who_are_we {
-        .expand-right {
-                width: 100px;
-                height: 50px;
-                text-align: left;
-                &:hover {
-                        width: 110px;
-                }
-        }
-        .who-text {
-                padding: 10px;
-
-                p {
-                        text-align: justify;
-                }
-        }
-}
-.who-read-btn {
-        border: 1px black solid;
-        background-color: white;
-        color: black;
-}
-.images4x4 {
-        img {
-                width: 50vw;
-        } 
-}
-//===========================================================================================================
-// =====Offers
-//===========================================================================================================
-.off {
-        display: block;
-        margin: 0 auto;
-        width: 200px;
-        height: 200px;
-}
-//===========================================================================================================
-// =====Portfolio
-//===========================================================================================================
->>>>>>> 20b21c901f795924ac08cdbb258b2811e6266be1
 
 //===========================================================================================================
 // =====Count Up
