@@ -4,13 +4,22 @@
     display: grid;
     // basic grid layout for mobile
     grid-template-areas: 
-                        "page-top"
+                        "page-top"      //all pages
                         "header"
-                        "slider"
-                        "about"
-                        "offers"
+                        "page-header"
+                        "gallery"       //portfolio page
+                        "welcome-text"  //about page
+                        "welcome-image"
+
+                        "slider"        //home page
+                        "about"         
+                        "about-us"      //about page
+                        "about-image"   
+
+                        "offers"        //home page
                         "portfolio"
                         "team"
+                        "team-profile"
                         "countup"
                         "subscribe"
                         "carousel"
@@ -32,8 +41,14 @@ header{grid-area: header;}
 // appears on courses page
 
 // appears on portfolio page
+#galleries{grid-area: gallery;}
 
 // appears on about page
+.welcome-text{grid-area: welcome-text;}
+.welcome-image{grid-area: welcome-image;}
+.about_us{grid-area: about-us;}
+.who-are-we-images{grid-area: about-image}
+#meet-our-team-images{grid-area: team-profile}
 
 // appears on contact page
 

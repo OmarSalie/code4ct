@@ -8,7 +8,7 @@ Tags:
 @import url("https://fonts.googleapis.com/css?family=Roboto:400");
 .container {
   display: grid;
-  grid-template-areas: "page-top" "header" "slider" "about" "offers" "portfolio" "team" "countup" "subscribe" "carousel" "footer"; }
+  grid-template-areas: "page-top" "header" "page-header" "gallery" "welcome-text" "welcome-image" "slider" "about" "about-us" "about-image" "offers" "portfolio" "team" "team-profile" "countup" "subscribe" "carousel" "footer"; }
 
 #page-top {
   grid-area: page-top; }
@@ -33,6 +33,24 @@ header {
 
 #countup {
   grid-area: countup; }
+
+#galleries {
+  grid-area: gallery; }
+
+.welcome-text {
+  grid-area: welcome-text; }
+
+.welcome-image {
+  grid-area: welcome-image; }
+
+.about_us {
+  grid-area: about-us; }
+
+.who-are-we-images {
+  grid-area: about-image; }
+
+#meet-our-team-images {
+  grid-area: team-profile; }
 
 #subscription_form {
   grid-area: subscribe; }
