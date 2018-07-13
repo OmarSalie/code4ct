@@ -3,7 +3,7 @@
 function drawerToggle() {
     let menu = document.getElementById("nav");
     if (menu.className === "navbar") {
-        menu.className = menu.className + " responsive";
+        menu.className = menu.className + " showMenu";
     } else {
         menu.className = "navbar";
     }

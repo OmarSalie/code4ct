@@ -1,1 +1,86 @@
 // Core theme styles
+// Apllied to body
+body {
+    margin: 0;
+    padding: 0;
+
+    // Text
+    font: {
+        size: 1em;
+        family: "Open Sans",Arial,sans-serif;
+    }
+    line-height: 1.3em;
+    text-align: justify;
+}
+
+// Used for heading of slider home page
+h2 {
+    font: {
+        size: 1.5em;
+    }
+}
+
+// Applies spacing to the different sections
+#home-section-b, #home-section-c, #home-section-d, #home-section-e {
+    padding: 10px;
+
+    img {
+        width: 100%;
+    }
+}
+
+// Backgraound Colors
+.black-bg { // Class that applies a black background with white text
+    background: {
+        color: $black;
+    }
+
+    color: $white;
+}
+
+.pink-bg {
+    background: {
+        color: $pink;
+    }
+
+    color: $white;
+}
+
+// Button Stying
+button {
+    display: inline-block;
+
+    background: {
+        color: $white;
+    }
+
+    border: 1px solid $black;
+    border-radius: 5px;
+
+    padding: 10px;
+
+    width: $button-width;
+
+    &:hover {
+        width: $button-expand;
+    }
+
+    a {
+        text: {
+            decoration: none;
+        }
+        color: black;
+    }
+}
+
+.red-border-bottom {    
+    border-bottom: 3px $pink solid; // places an underline
+}
+.transparent-border {
+    border-bottom: 1px rgba(0,0,0,0.2) solid;
+}
+// Image Size
+.off-image {
+    display: block;
+    height: 15em;
+}
