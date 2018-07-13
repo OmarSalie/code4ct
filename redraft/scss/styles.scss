@@ -1,6 +1,15 @@
 @import 'partials/colors',
         'partials/variables',
-        'partials/mixins',
-        'partials/base',
-        'partials/navigation',
-        'partials/footer';
+        'partials/mixins';
+
+        // Core Page Styling
+@import 'partials/base';
+
+        // Header Styling (includes navigation)
+@import 'partials/header';
+
+        // Home Page Specific Styling
+@import 'partials/image-slider';
+
+        // Footer Styling
+@import 'partials/footer';
