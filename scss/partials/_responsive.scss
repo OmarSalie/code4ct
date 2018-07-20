@@ -50,6 +50,10 @@
                 }
         }
     }
+
+    .badges {
+        padding-left: 45vw;
+}
 }
 
 // Desktop
@@ -77,9 +81,11 @@
     header {
         .company-logo {
             img {
-                width: 30vw;
+                width: 25vw;
+                height: 9vh;
             }
         }
+        height: 10vh;
     }
     
     // navigation

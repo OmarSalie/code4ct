@@ -81,7 +81,7 @@ footer {
 .images4x4 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 25% 25%;
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 5px; }
 
 html {
@@ -135,6 +135,9 @@ header {
       width: 40vw;
       height: 8vh; }
 
+.company-logo {
+  width: 280px; }
+
 .navItems {
   display: none; }
 
@@ -148,7 +151,7 @@ header {
     font-size: 20px;
     color: #b36e69; }
 
-.navbar.responsive .navItems {
+.navbar.showMenu .navItems {
   float: none;
   display: block;
   text-align: center;
@@ -158,20 +161,20 @@ header {
   background-color: white;
   color: black;
   text-decoration: none; }
-  .navbar.responsive .navItems:hover {
+  .navbar.showMenu .navItems:hover {
     background-color: #b36e69;
     color: white; }
-  .navbar.responsive .navItems:first-child {
+  .navbar.showMenu .navItems:first-child {
     border-top: 1px #b36e69 solid; }
-.navbar.responsive #search {
+.navbar.showMenu #search {
   border: none;
   border-bottom: 2px #b36e69 solid;
   border-radius: 5px; }
-.navbar.responsive .search-button {
+.navbar.showMenu .search-button {
   text-decoration: none;
   border: none;
   background-color: white; }
-  .navbar.responsive .search-button:hover {
+  .navbar.showMenu .search-button:hover {
     color: #b36e69; }
 
 .sub_form-icon {
@@ -440,7 +443,10 @@ header {
     height: 75px;
     text-align: left; }
     #who_are_we .expand-right:hover {
-      width: 165px; } }
+      width: 165px; }
+
+  .badges {
+    padding-left: 45vw; } }
 @media (min-width: 1024px) {
   .container p {
     font-size: 20px; }
@@ -453,8 +459,11 @@ header {
   .container h4 {
     font-size: 25px; }
 
-  header .company-logo img {
-    width: 30vw; }
+  header {
+    height: 10vh; }
+    header .company-logo img {
+      width: 25vw;
+      height: 9vh; }
 
   .navItems {
     display: inline-block;
