@@ -1,0 +1,33 @@
+#profile {
+    padding: 20px;
+}
+
+.profile {
+    img {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.pro-text {
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.pro-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.pro-title {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.pro-desc {
+    text-align: center;
+    font-size: 1em;
+}

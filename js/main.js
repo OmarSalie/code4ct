@@ -53,5 +53,15 @@ function carousel() {
     
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "inline-block"; 
-    setTimeout(carousel, 10000); // Change image every 2 seconds 
+    setTimeout(carousel, 12000); // Change image every 2 seconds 
+}
+
+function scrollFunction() {
+    let btt = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btt.style.display = "block";
+    } 
+    else {
+        btt.style.display = "none";
+    }
 }
