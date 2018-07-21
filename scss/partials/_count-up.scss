@@ -11,3 +11,15 @@
 .count-desc {
     font-size: 1em;
 }
+
+@media (min-width: 768px) {
+    #countup {
+        @include gridFour;
+    }
+}
+
+@media (min-width: 1024px) {
+    #countup {
+        @include gridLinear;
+    }
+}

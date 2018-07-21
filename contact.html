@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="css/fa-solid.css">
     <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
 
+    <!-- the favicon used in the browser tabs -->
+    <link rel="icon" href="images/favicon.png" type="image/ico">
+
     <title>Contact Us | CODE4CT</title>
 </head>
 <body>
@@ -51,31 +54,48 @@
     <!-- Main: main body of the web page -->
     <!-- ================================================================================================= -->
     <main>
-        <!-- Section A: contains image slider and introduction to site -->
-        <section id="home-section-a">
+        <section id="page-header">
+            <h1>CONTACT</h1>
+            <p><span class="main-pink">HOME</span> → CONTACT</p>
+        </section>
+
+        <!-- Section A: contains a form to contact company -->
+        <section id="section-a">
+            <div id="contact-details">
+                <div id="contactform">
+        
+                    <h3 class="transparent-border"><span class="red-border-bottom">Send</span> Us a Message</h3>
+                    <form>
+                        <input type="text" id ="contact-form-name" placeholder="Your Name">
+                        <input type="text" id ="contact-form-email" placeholder="Your E-mail">
+                        <input style="padding-right:1px" type="text" id = "yournumber" placeholder="Phone number">
+                        <textarea name="message" rows="9" cols="32" placeholder="Your message"></textarea>
+            
+                        <button type="button" name="button">Send Email</button>
+                    </form>
+                
+                </div>
+        
+                <div id="contactinfo">
+                    <h3 class="transparent-border"><span class="red-border-bottom">Contact</span> Info</h3>
+        
+                    <p> 021 685 0991 </p>
+                    <p> info@code4ct.com</p>
+                    <p> Mon-Fri 09:00 to 12:00</p>
+                    <p> Innovate South Africa, 403 Old Castle Brewery, 6 Beach Rd, Woodstock, Cape Town, 7915</p>
+        
+                </div>
+            </div>
             
         </section>
 
-        <!-- Section B: contains brief information about what the company does -->
-        <section id="home-section-b">
-            
-        </section>
-
-        <!-- Section C: contains information on what is offered by the company -->
-        <section id="home-section-c" class="black-bg">
-            
-        </section>
-
-        <!-- Section D: contains a small portfolio of images of what is done at the company -->
-        <section id="home-section-d">
-
-        </section>
-
-        <!-- Section E: contains the information of the core members of staff with images -->
-        <section id="home-section-e">
-            
+        <!-- Section B: contains google map embedded showing the location of the company -->
+        <section id="section-b">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.638062445999!2d18.44652591521169!3d-33.92471368064084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d9854044ed9%3A0x6a0ebf49da5aabab!2sCodeSpace!5e0!3m2!1sen!2sza!4v1511462091578" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
     </main>
+
+    <a href="#page-top" id="back-to-top" title="Back To Top">&uarr;</a>
 
     <!-- ================================================================================================= -->
     <!-- Footer: contains brief information on how to contact the company -->

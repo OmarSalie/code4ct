@@ -79,3 +79,56 @@ header {
         }
     }
 } 
+
+@media (min-width: 1024px) {
+    header {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+    }
+    .navItems {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        padding: 20px;
+        // 
+        &:hover {
+            color: $pink;
+        }
+    }
+    .navbar{
+        vertical-align: top;
+        display: inline-block;
+        .icon {
+            display: none;
+        }
+    }
+    .search-bar {
+        float: right;
+
+        #search {
+            padding-right: 0;
+            border: none;
+            border-bottom: 2px $pink solid;
+            border-radius: 5px;
+        }
+        .search-button {
+            padding-left: 0;
+            text-decoration: none;
+            border: none;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            width: 0;
+            
+            &:hover {
+                color: $pink;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .navItems {
+        padding-right: 50px;
+    }
+}

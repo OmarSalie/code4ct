@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="css/fa-solid.css">
     <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
 
+    <!-- the favicon used in the browser tabs -->
+    <link rel="icon" href="images/favicon.png" type="image/ico">
+
     <title>Portfolio | CODE4CT</title>
 </head>
 <body>
@@ -51,29 +54,69 @@
     <!-- Main: main body of the web page -->
     <!-- ================================================================================================= -->
     <main>
+        <!-- contains the page header -->
+        <section id="page-header">
+            <h1>PORTFOLIO</h1>
+            <p><span class="main-pink">HOME</span> → PORTFOLIO</p>
+        </section>
+
         <!-- Section A: contains image slider and introduction to site -->
-        <section id="home-section-a">
-            
-        </section>
-
-        <!-- Section B: contains brief information about what the company does -->
-        <section id="home-section-b">
-            
-        </section>
-
-        <!-- Section C: contains information on what is offered by the company -->
-        <section id="home-section-c" class="black-bg">
-            
-        </section>
-
-        <!-- Section D: contains a small portfolio of images of what is done at the company -->
-        <section id="home-section-d">
-
-        </section>
-
-        <!-- Section E: contains the information of the core members of staff with images -->
-        <section id="home-section-e">
-            
+        <section id="section-a">
+            <div class="gallery">
+                <div class="gallery-grid">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" class="galleryImg3" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" class="galleryImg6" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                    <img src="images/portfolio1.jpg" class="galleryImg11" alt="">
+                    <img src="images/portfolio1.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-grid">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" class="galleryImg3" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" class="galleryImg6" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                    <img src="images/portfolio2.jpg" class="galleryImg11" alt="">
+                    <img src="images/portfolio2.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-grid">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" class="galleryImg3" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" class="galleryImg6" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                    <img src="images/portfolio3.jpg" class="galleryImg11" alt="">
+                    <img src="images/portfolio3.jpg" alt="">
+                </div>
+            </div>
+            <div class="slideNav black-bg">
+                <div class="arrow align-center navigation" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="navigation indicators" onclick="currentDiv(1)">1</div>
+                <div class="navigation indicators" onclick="currentDiv(2)">2</div>
+                <div class="navigation indicators" onclick="currentDiv(3)">3</div>
+                <div class="arrow align-center navigation" onclick="plusDivs(1)">&#10095;</div>
+            </div>
         </section>
     </main>
 
@@ -104,6 +147,8 @@
             </div>
         </section>
     </aside>
+
+    <a href="#page-top" id="back-to-top" title="Back To Top">&uarr;</a>
 
     <!-- ================================================================================================= -->
     <!-- Footer: contains brief information on how to contact the company -->
@@ -171,6 +216,44 @@
         };
 
         carousel();
+    </script>
+
+    <script>
+        'use strict';
+
+        let sliderIndex = 1;
+        showDivs(sliderIndex);
+
+        function plusDivs(n) {
+        showDivs(sliderIndex += n);
+        }
+
+        function currentDiv(n) {
+        showDivs(sliderIndex = n);
+        }
+
+        function showDivs(n) {
+            let i;
+            let x = document.getElementsByClassName("gallery");
+            let dots = document.getElementsByClassName("indicators");
+
+            if (n > x.length) {
+                sliderIndex = 1
+            }    
+            if (n < 1) {
+                sliderIndex = x.length
+            }
+
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" selected", "");
+            }
+
+            x[sliderIndex-1].style.display = "block";  
+            dots[sliderIndex-1].className += " selected";
+        }
     </script>
 </body>
 </html>

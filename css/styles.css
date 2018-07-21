@@ -15,6 +15,7 @@ body {
 h2 {
   font-size: 1.5em; }
 
+#section-a,
 #section-b,
 #section-c,
 #section-d {
@@ -163,6 +164,48 @@ header {
   .navbar.showMenu .search-button:hover {
     color: #b36e69; }
 
+@media (min-width: 1024px) {
+  header {
+    display: grid;
+    grid-template-columns: 300px 1fr; }
+
+  .navItems {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 20px; }
+    .navItems:hover {
+      color: #b36e69; }
+
+  .navbar {
+    vertical-align: top;
+    display: inline-block; }
+    .navbar .icon {
+      display: none; }
+
+  .search-bar {
+    float: right; }
+    .search-bar #search {
+      padding-right: 0;
+      border: none;
+      border-bottom: 2px #b36e69 solid;
+      border-radius: 5px; }
+    .search-bar .search-button {
+      padding-left: 0;
+      text-decoration: none;
+      border: none;
+      background-color: white;
+      padding: 0;
+      margin: 0;
+      width: 0; }
+      .search-bar .search-button:hover {
+        color: #b36e69; } }
+@media (min-width: 1440px) {
+  .navItems {
+    padding-right: 50px; } }
+#image-slider {
+  padding: 0; }
+
 .mySlides {
   width: 100%;
   height: 60vh; }
@@ -259,6 +302,24 @@ header {
   width: 150px;
   height: 150px; }
 
+@media (min-width: 768px) {
+  .offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px; }
+
+  .off-text {
+    text-align: center; } }
+@media (min-width: 768px) {
+  .offers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px; }
+
+  .off-text {
+    text-align: center; } }
 #profile {
   padding: 20px; }
 
@@ -285,6 +346,33 @@ header {
   text-align: center;
   font-size: 1em; }
 
+@media (min-width: 768px) {
+  #profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 1fr 1fr; }
+    #profile h3 {
+      grid-column: 1/3; } }
+@media (min-width: 1024px) {
+  .profile {
+    display: grid;
+    grid-template-columns: 60% 40%; }
+    .profile img {
+      width: 70%;
+      margin-bottom: 10px; } }
+#courses-section-a {
+  margin: 20px; }
+  #courses-section-a .shop-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #C8BBBE; }
+
+@media (min-width: 768px) {
+  #shopping-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    grid-gap: 10px; } }
 #courses-section-b {
   border: 1px solid #C8BBBE;
   background-color: rgba(179, 110, 105, 0.4); }
@@ -305,13 +393,6 @@ header {
   #courses-section-b .item-count {
     width: 40px;
     border: none; }
-
-#courses-section-a {
-  margin: 20px; }
-  #courses-section-a .shop-item {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #C8BBBE; }
 
 #courses-section-c {
   display: block;
@@ -337,6 +418,18 @@ header {
 .count-desc {
   font-size: 1em; }
 
+@media (min-width: 768px) {
+  #countup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px; } }
+@media (min-width: 1024px) {
+  #countup {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px; } }
 .sub_form-icon {
   color: #b36e69; }
 
@@ -389,6 +482,42 @@ header {
     left: 100%; }
   100% {
     left: -200%; } }
+#contactform form input {
+  display: block;
+  width: 200px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin: 5px auto; }
+#contactform form textarea {
+  display: block;
+  width: 200px;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin: 5px auto;
+  resize: none; }
+#contactform form button {
+  display: block;
+  border: 1px solid #b36e69;
+  background-color: #b36e69;
+  color: white;
+  margin: 0 auto; }
+
+@media (min-width: 768px) {
+  #contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; } }
+@media (min-width: 1024px) {
+  #contactform form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px; }
+    #contactform form textarea {
+      grid-column: 1/4;
+      grid-row: 2/4;
+      width: 100%; } }
 .social-media {
   position: static;
   bottom: 0;
@@ -415,5 +544,73 @@ header {
   text-decoration: none; }
   .info-help ul li a:hover {
     text-decoration: none; }
+
+@media (min-width: 1024px) {
+  .site-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) {
+  .who-are-we .info-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px; }
+
+  .portfolio .portfolio-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px; }
+  .portfolio .portfolio-imageLrg {
+    margin-top: 10px; } }
+@media (min-width: 1024px) {
+  .who-are-we {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-rows: 150px 1fr; }
+    .portfolio .portfolio-text {
+      grid-column: 1/3; } }
+@media (min-width: 768px) {
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 22% 22% 1fr 22% 22%;
+    grid-template-rows: 200px; }
+    .gallery-grid .galleryImg3 {
+      grid-column: 3/5; }
+    .gallery-grid .galleryImg6 {
+      grid-column: 2/4; }
+    .gallery-grid .galleryImg11 {
+      grid-column: 3/5; } }
+@media (min-width: 1024px) {
+  .welcome {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; }
+
+  .who-we-are {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 300px;
+    grid-gap: 20px; }
+    .who-we-are .who-image {
+      grid-column: 1/2;
+      grid-row: 1/3; }
+    .who-we-are .who-text {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+    .who-we-are .who-about {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */
